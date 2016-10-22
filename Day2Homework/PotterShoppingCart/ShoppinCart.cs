@@ -18,6 +18,11 @@ namespace PotterShoppingCart
 
         private double GetTotalPrice(List<HarryPotter> books)
         {
+            if(books.Count == 2)
+            {
+                return 100 * books.Count * 0.95;
+            }
+
             return 100 * books.Count;
         }
     }
