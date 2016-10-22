@@ -13,7 +13,12 @@ namespace PotterShoppingCart
 
         public void AddToCart(List<HarryPotter> books)
         {
-            throw new NotImplementedException();
+            this.TotalPrice = GetTotalPrice(books);
+        }
+
+        private double GetTotalPrice(List<HarryPotter> books)
+        {
+            return 100 * books.Count;
         }
     }
 }
